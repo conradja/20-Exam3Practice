@@ -6,8 +6,8 @@ This problem provides practice at:
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Joseph Conrad.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 # Students:
@@ -38,7 +38,7 @@ def main():
 def run_test_doubler():
     """ Tests the    doubler    function. """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement this TEST function.
+    # DONE: 2. Implement this TEST function.
     #   It TESTS the  doubler  function defined below.
     #   Include at least ** 1 ** ADDITIONAL test beyond those we wrote.
     #
@@ -83,8 +83,15 @@ def run_test_doubler():
     # -------------------------------------------------------------------------
     # TO DO 2 (continued): Add your ADDITIONAL test(s) here:
     # -------------------------------------------------------------------------
-
-
+    arg1 = [15, 0, -10, 11]
+    arg2 = [2, 1, 0.5]
+    correct_arg1_after = [30, 0, -20, 22]
+    correct_arg2_after = [2, 1, 0.5]
+    expected = [4, 2, 1]
+    print('Initial:    ', arg1, arg2)
+    print('Expected:   ', correct_arg1_after, correct_arg2_after)
+    returned = doubler(arg1, arg2)
+    print('Acutal :    ', arg1, arg2, returned)
 def doubler(list1, list2):
     """
     Both arguments are lists of integers.  This function:
@@ -103,16 +110,20 @@ def doubler(list1, list2):
         :type list2: list of int
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # -------------------------------------------------------------------------
     # -------------------------------------------------------------------------
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
     #    DIFFICULTY:      4
     #    TIME ESTIMATE:   5 minutes.
-    # -------------------------------------------------------------------------
-
-
+    # ------------------------  -------------------------------------------------
+    new_list = []
+    for k in range(len(list1)):
+        list1[k] = list1[k]*2
+    for j in range(len(list2)):
+        new_list.append(list2[j] *2)
+    return new_list
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # -----------------------------------------------------------------------------
