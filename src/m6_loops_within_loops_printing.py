@@ -6,8 +6,8 @@ This problem provides practice at:
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Joseph Conrad.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 # Students:
@@ -28,7 +28,6 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 #    STOP working on that problem and ASK YOUR INSTRUCTOR FOR HELP
 #    on it, in class or via Piazza.
 ###############################################################################
-
 
 def main():
     """ Calls the   TEST   functions in this module. """
@@ -76,7 +75,7 @@ def shape(r):
     For purposes of "lining up", assume r is a single digit.
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     ###########################################################################
@@ -88,6 +87,18 @@ def shape(r):
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:  15 minutes.
     # -------------------------------------------------------------------------
+    for j in range(r):
+        for y in range(j):
+            print(' ', end='')
+        for k in range(r-j):
+            print('+', end='')
+        print('!', end='')
+
+        for x in range(r-j, 0,-1):
+            print(x, end='')
+        for l in range(j):
+            print('-',end='')
+        print()
 
 
 # -----------------------------------------------------------------------------
